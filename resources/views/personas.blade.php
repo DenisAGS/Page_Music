@@ -40,7 +40,7 @@
         <button class="btn btn-success" data-toggle="modal" data-target="#agregarModal">
             <i class="fas fa-plus"></i> Agregar
         </button>
-    <table id="guardarForm" class="table mt-3">
+    <table id="miForm" class="table mt-3">
         @csrf
         <thead>
             <tr>
@@ -52,30 +52,6 @@
             </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>1</td>
-            <td>John</td>
-            <td>Doe</td>
-            <td>Smith</td>
-            <td>
-                <button class="eliminar-btn">Eliminar</button>
-            </td>
-            <td>
-                <button  data-toggle="modal" data-target="#editarModal" class="editar-btn">Editar</button>
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>John</td>
-            <td>Doe</td>
-            <td>Smith</td>
-            <td>
-                <button class="eliminar-btn">Eliminar</button>
-            </td>
-            <td>
-                <button  data-toggle="modal" data-target="#editarModal" class="editar-btn">Editar</button>
-            </td>
-        </tr>
     </tbody>
     </table>
  </div>
@@ -146,7 +122,6 @@
 </div>
 
 <script>
-     // Función para generar un ID único
      function generarID() {
         return new Date().getTime();
     }
@@ -156,10 +131,8 @@
         var apellidoM = $('#apellidoM').val();
         var apellidoP = $('#apellidoP').val();
 
-        // Generar un nuevo ID único
         var nuevoID = generarID();
 
-        // Agregar una nueva fila a la tabla con el nuevo registro
         var nuevaFila = '<tr>' +
                             '<td>' + nuevoID + '</td>' +
                             '<td>' + nombre + '</td>' +
@@ -169,19 +142,10 @@
                             '<td><button data-toggle="modal" data-target="#editarModal" class="editar-btn">Editar</button></td>' +
                          '</tr>';
 
-        $('#guardarForm tbody').append(nuevaFila);
+        $('#miForm tbody').append(nuevaFila);
 
-        $('#nombre').val('');
-        $('#apellidoM').val('');
-        $('#apellidoP').val('');
-
-        $('#agregarModal').modal('hide');
     }
 
-    // Manejador de eventos para el clic en el botón de agregar
-    $('#agregarModal .btn-primary').on('click', function() {
-        agregar();
-    });
 
 
 // El modal para editar
@@ -190,7 +154,7 @@
         $('#editarModal #apellidoMEditar').val(apellidoM);
         $('#editarModal #apellidoPEditar').val(apellidoP);
 
-        $('#editarModal').attr('data-id', id);
+        $('#editarModal').attr('id', id);
 
         $('#editarModal').modal('show');
     }
@@ -218,6 +182,13 @@
 
         $('#editarModal').modal('hide');
     }
+
+    $('#miForm').on('click', '.eliminar-btn', function() {
+            var row = $(this).closest('tr');
+            
+            row.remove();
+        });
+
 </script>
     <!--<footer>
       <div>

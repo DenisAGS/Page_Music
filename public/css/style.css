@@ -217,7 +217,19 @@ section .cards .card {
 
 .eliminar-btn, .editar-btn {
   padding: 6px 10px;
-  font-size: 14px;
+  font-size: 14px
+}
+
+.eliminar-btn{
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.editar-btn{
+    background-color: #26a500;
+    color: white;
+    border: none;
 }
 
 .modal-footer {
