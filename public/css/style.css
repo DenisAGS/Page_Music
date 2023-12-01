@@ -23,7 +23,9 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: #2d2d29;
+  height: 10%;
 }
 
 .navbar {
@@ -65,7 +67,7 @@ header a, footer a {
   text-decoration: none;
   color: #fff;
   height: 100%;
-  padding: 20px 0;
+  padding: 6px 0;
   display: inline-block;
   font-weight: 500;
 }
@@ -193,7 +195,34 @@ section .cards .card {
   margin-top: 5px;
 }
 
+#content{
+  margin: 7% 2% 0%;
+}
 
+#content table {
+  align-items: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#content th, #content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center; 
+}
+
+#content th {
+  background-color: #f2f2f2;
+}
+
+.eliminar-btn, .editar-btn {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.modal-footer {
+  justify-content: center;
+}
 
 footer {
   width: 100%;
@@ -265,12 +294,17 @@ footer a {
 
   .content a {
     font-size: 17px;
-    padding: 9px 20px;
+    padding: 5px 20px;
   }
 
  
   footer a {
     height: 0;
   }
+
+  #content{
+    margin-top: 12%;
+  }
+  
 }
 

@@ -1,7 +1,7 @@
-@extends('layout.header')
-
+@extends('layouts/contenidoBody')
 @section('content')
-    <section class="inicio" id="home">
+
+<section class="inicio" id="home">
       <div class="content">
         <div class="text">
           <h1>La música es el lenguaje universal del alma.</h1>
@@ -35,4 +35,4 @@
           <p>Canciones: Fotos, La Parte Buena, Amor de Adolecentes, Mi Rival, Por Última Vez.</p>
         </li>
       </ul>
-</section>
+    </section>
