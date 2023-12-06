@@ -16,3 +16,16 @@ use App\Http\Controllers\sitioController;
 
 Route::get('/personas', [sitioController::class,'index']);
 Route::post('/personas/store', [sitioController::class, 'store'])->name('personas.store');
+
+
+// Ruta para la página de herramientas
+Route::get('/artistas', [sitioController::class, 'artistas']);
+
+// Ruta para la página de preguntas frecuentes
+Route::get('/bilioteca', [sitioController::class, 'biblioteca']);
+
+// Ruta para la página de noticias
+Route::get('/generos', [sitioController::class, 'generos']);
+
+// Ruta para la página de blog
+Route::get('/acerca', [sitioController::class, 'acerca']);

@@ -26,11 +26,11 @@
         </label>
 
         <ul class="all-links">
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./page_biblioteca/biblioteca.html">Biblioteca</a></li>
-          <li><a href="./page_generos/generos.html">Géneros</a></li>
-          <li><a href="./page_artistas/artistas.html">Artistas</a></li>
-          <li><a href="./page_acerca/acerca.html">Acerca de</a></li>
+          <li><a href="index">Inicio</a></li>
+          <li><a href="biblioteca">Biblioteca</a></li>
+          <li><a href="generos">Géneros</a></li>
+          <li><a href="artistas">Artistas</a></li>
+          <li><a href="acerca">Acerca de</a></li>
         </ul>
         
       </nav>
